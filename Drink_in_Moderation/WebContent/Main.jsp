@@ -123,13 +123,13 @@
 			<li><br><br><br><br><br><br></li>
 			<li><p style="font-size:24px"><a href="https://www.naver.com">Log in</a></p></li>
 			<li><br><br><br><br></li>
-			<li><p style="font-size:24px"><a href="#">Diary</a></p></li>
+			<li><p style="font-size:24px"><a href="Diary.jsp">Diary</a></p></li>
 			<li><br><br><br><br></li>
-			<li><p style="font-size:24px"><a href="#">Disease</a></p></li>
+			<li><p style="font-size:24px"><a href="Disease.jsp">Disease</a></p></li>
 			<li><br><br><br><br></li>
-			<li><p style="font-size:24px"><a href="#">A drunken accident</a></p></li>
+			<li><p style="font-size:24px"><a href="A drunken accident.jsp">A drunken accident</a></p></li>
 			<li><br><br><br><br></li>
-			<li><p style="font-size:24px"><a href="#">Alternative drink</a></p></li>
+			<li><p style="font-size:24px"><a href="Alternative drink.jsp">Alternative drink</a></p></li>
 		</ul>
 	</div>
 </body>
