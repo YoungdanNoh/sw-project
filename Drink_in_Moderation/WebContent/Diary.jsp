@@ -13,6 +13,7 @@
 </style>
 </head>
 <body>
+<jsp:include page="Main_menu.jsp" flush="false"></jsp:include>
 	<%
 		Calendar tDay = Calendar.getInstance();
 		int y = tDay.get(Calendar.YEAR);
@@ -50,7 +51,6 @@
 				<%}}%>
 		</tr> 
 	</table>
-	<a href="Diary.jsp">초기화면</a>
     <script>
       var year = <%=y%>;
       var month = <%=m+1%>;
@@ -58,7 +58,7 @@
       var after=0;
       function reply_click(clicked_id)
       {
-    	  location.href="Record.jsp?id="+clicked_id+"&year="+year+"&month="+month;
+    	  location.href="Date.jsp?id="+clicked_id+"&year="+year+"&month="+month;
       }
       function previous(){
     	  cnt--;

@@ -8,11 +8,11 @@
 <style>
 	body{
 		background-image: url(Red_stop.png);
-		background-repeat: no-repeat;
 		background-size: cover;
+		/* 배경을 사용하는 요소를 다 채울 수 있게 이미지를 확대 또는 축소합니다. 가로 세로 비율을 유지합니다. */
 	}
 	
-	#Settings{
+	#icon{
 		width: 65px;
 		height: 50px;
 		background-image: url(맥주.jpg);
@@ -107,7 +107,10 @@
 </style>
 </head>
 <body>
-	<div id="Settings"></div>
+<%
+	String ID = (String)session.getAttribute("ID");
+%>
+	<div id="icon"></div>
 	<input type="checkbox" id="menuicon">
 		<ul>
 			<li>
@@ -120,16 +123,24 @@
 		</ul>
 	<div class="sidebar">
 		<ul>
-			<li><br><br><br><br><br><br></li>
-			<li><p style="font-size:24px"><a href="https://www.naver.com">Log in</a></p></li>
-			<li><br><br><br><br></li>
-			<li><p style="font-size:24px"><a href="Diary.jsp">Diary</a></p></li>
-			<li><br><br><br><br></li>
+			<li><br><br><br><br><br></li>
+			<li><p style="font-size:24px">
+				<%if(ID==null){%><a href="Login.jsp">Login</a><%}
+					else{%><a href="Logout.jsp" onClick="alert('로그아웃 되었습니다.')">Logout</a><%}%>
+				</p></li>
+			<li><br><br></li>
+			<li><p style="font-size:24px">
+				<a <%if(ID==null){%>href="#" onClick="alert('로그인 먼저 해주세요.')"<%}
+					else{%>href="Diary.jsp"<%}%>>Diary</a></p></li>
+			<li><br><br></li>
 			<li><p style="font-size:24px"><a href="Disease.jsp">Disease</a></p></li>
-			<li><br><br><br><br></li>
+			<li><br><br></li>
 			<li><p style="font-size:24px"><a href="A drunken accident.jsp">A drunken accident</a></p></li>
-			<li><br><br><br><br></li>
+			<li><br><br></li>
 			<li><p style="font-size:24px"><a href="Alternative drink.jsp">Alternative drink</a></p></li>
+			<li><br><br></li>
+			<li><p style="font-size:24px">
+				<%if(ID==null){}else{%><a href="Setting.jsp">Setting</a><%} %></p></li>
 		</ul>
 	</div>
 </body>

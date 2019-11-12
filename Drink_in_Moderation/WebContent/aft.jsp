@@ -13,6 +13,7 @@
 </style>
 </head>
 <body>
+<jsp:include page="Main_menu.jsp" flush="false"></jsp:include>
 <%
 	String after = request.getParameter("after").trim();
 	int c = Integer.parseInt(after);
@@ -57,14 +58,13 @@
 				<%}}%>
 		</tr> 
 	</table>
-	<a href="Diary.jsp">초기화면</a>
 	<!-- 다음달 -->
     <script>
       var year = <%=Y%>;
       var month = <%=M+1%>;
       function reply_click(clicked_id)
       {
-    	  location.href="Record.jsp?id="+clicked_id+"&year="+year+"&month="+month;
+    	  location.href="Date.jsp?id="+clicked_id+"&year="+year+"&month="+month;
       }
       function After(){
     	  var after =<%=Integer.parseInt(after)%>+1;

@@ -10,8 +10,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Alternative drink</title>
+<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans|Do+Hyeon|Gamja+Flower&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sunflower:300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Sunflower:300&display=swap" rel="stylesheet">
+<style>
+	.table{
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.title{
+		font-family: 'Gamja Flower', cursive;
+		font-family: 'Black Han Sans', sans-serif;
+		font-family: 'Do Hyeon', sans-serif;
+	}
+	.name{
+		font-family: 'Sunflower', sans-serif;
+	}
+	.Alternative{
+		font-family: 'Sunflower', sans-serif;
+		font-family: 'Gamja Flower', cursive;
+	}
+</style>
 </head>
 <body>
+<jsp:include page="Main_menu.jsp" flush="false"></jsp:include>
 <%
 	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection conn = null;
@@ -41,16 +63,14 @@
 		
 	}
 %>
-<center>
 <br><br>
-<h1><font size="10">술을 마시지 않을 수 있는 대안</font></h1>
-</center>
-<table align="center">
+<h1 align="center" class="title"><font size="10">술을 마시지 않을 수 있는 대안</font></h1>
+<table class="table">
 <%
 	for(int i=0; i<Alternative_name.size(); i++){%>
 		<tr>
 			<td align="center" style="padding-top:100px">
-				<p><font size="7"><%=Alternative_name.get(i)%></font></p>
+				<p class="name"><font size="7"><%=Alternative_name.get(i)%></font></p>
 			</td>
 		</tr>
 		<tr>
@@ -58,7 +78,7 @@
 		</tr>
 		<tr>
 			<td align="center">
-				<p><font size="5"><%=Alternative.get(i)%></font></p>
+				<p class="Alternative"><font size="5"><%=Alternative.get(i)%></font></p>
 			</td>
 		</tr>
 	<%}%>
