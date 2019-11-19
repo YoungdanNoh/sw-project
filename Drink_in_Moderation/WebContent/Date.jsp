@@ -19,7 +19,7 @@
 	}
 	String date = year+"-"+month+"-"+day;
 %>
-<jsp:forward page="/test.jsp">
+<jsp:forward page="/Record.jsp">
 	<jsp:param value="<%=date %>" name="date"/>
 </jsp:forward>
 </body>

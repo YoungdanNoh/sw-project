@@ -109,6 +109,7 @@
 <body>
 <%
 	String ID = (String)session.getAttribute("ID");
+	/* 속성명이 ID인 session의 값을 가져온다. */
 %>
 	<div id="icon"></div>
 	<input type="checkbox" id="menuicon">
@@ -127,11 +128,13 @@
 			<li><p style="font-size:24px">
 				<%if(ID==null){%><a href="Login.jsp">Login</a><%}
 					else{%><a href="Logout.jsp" onClick="alert('로그아웃 되었습니다.')">Logout</a><%}%>
+					<!-- 로그인이 되어있으면 Logout, 로그인이 되어있지 않으면 Login이라는 글자를 띄운다. -->
 				</p></li>
 			<li><br><br></li>
 			<li><p style="font-size:24px">
 				<a <%if(ID==null){%>href="#" onClick="alert('로그인 먼저 해주세요.')"<%}
 					else{%>href="Diary.jsp"<%}%>>Diary</a></p></li>
+					<!-- 로그인이 되어있지 않으면 Diary페이지로 이동하지 못하게한다. -->
 			<li><br><br></li>
 			<li><p style="font-size:24px"><a href="Disease.jsp">Disease</a></p></li>
 			<li><br><br></li>
