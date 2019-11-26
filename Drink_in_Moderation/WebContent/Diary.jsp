@@ -28,6 +28,11 @@
 	%>
 	<table align="center" width="600" height="700" style="padding-top:150px">
 		<tr>
+			<td>
+				<form action="DrinkPerMonth.jsp"><input type="submit" value="그래프"></form>
+			</td>
+		</tr>
+		<tr>
 			<td><input type="button" value="이전달" onclick="previous()"/></td>
 			<td align="center"colspan="5"><%=y%>년 <%=(m+1)%>월</td>
 			<td><input type="button" value="다음달" onclick="After()"/></td>

@@ -8,7 +8,6 @@
 <style>
 	#t{
 		width:100%;
-		position: fixed;
 		background-color:#0B4C5F;
 	}
 	a{
