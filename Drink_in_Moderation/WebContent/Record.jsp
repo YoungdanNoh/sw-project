@@ -33,6 +33,7 @@
 <jsp:include page="Main_menu.jsp" flush="false"></jsp:include>
 <br><br>
 <h1 align="center" class="font">기록하기!</h1>
+<!-- <h1 align="center">기록하기!</h1> -->
 <!-- 날짜정보를 Date.jsp에 보내고 그 정보를 여기서 가져와야 버튼을 눌렀을때 nullpoint에러가 뜨지않는다. -->
 <%
 	String date = request.getParameter("date");

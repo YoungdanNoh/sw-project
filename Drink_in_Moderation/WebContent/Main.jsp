@@ -11,7 +11,6 @@
 		background-size: cover;
 		/* 배경을 사용하는 요소를 다 채울 수 있게 이미지를 확대 또는 축소합니다. 가로 세로 비율을 유지합니다. */
 	}
-	
 	#icon{
 		width: 65px;
 		height: 50px;
